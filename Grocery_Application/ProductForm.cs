@@ -105,5 +105,21 @@ namespace Grocery_Application
                 productRepo.Update(this.selectedProduct);
             }
         }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Seçili müşteriyi silmek istiyor musunuz?", "Müşteri Ekranı", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (result == DialogResult.OK)
+            {
+                FormDelete();
+                MessageBox.Show("Kayıt silme başarılı!");
+                this.Close();
+            }
+        }
+
+        private void FormDelete()
+        {
+            productRepo.Delete(this.selectedProduct);
+        }
     }
 }

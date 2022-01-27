@@ -72,6 +72,7 @@ namespace Grocery_Application
             this.btnDelete.TabIndex = 0;
             this.btnDelete.Text = "Sil";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnSave
             // 
